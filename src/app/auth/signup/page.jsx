@@ -14,9 +14,16 @@ const SignUpPage = () => {
       name :userData.name,
       email :userData.email,
       password :userData.password,
+      callbackURL:'/'
     })
 
     console.log('sign up response',{data,error})
+    if(error){
+      alert("Error signing up" + error.message)
+    }
+    if(data){
+      alert("sign up successfull! please click your email verify your account.")
+    }
   }
 
   return (
